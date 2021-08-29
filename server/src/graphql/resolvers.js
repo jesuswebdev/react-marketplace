@@ -4,10 +4,12 @@ const userResolvers = require("../user/resolvers");
 
 const resolvers = {
   Query: {
-    ...permissionResolvers.query
+    ...permissionResolvers.query,
+    ...roleResolvers.query
   },
   Mutation: {
-    ...permissionResolvers.mutations
+    ...permissionResolvers.mutations,
+    ...roleResolvers.mutations
   }
 };
 

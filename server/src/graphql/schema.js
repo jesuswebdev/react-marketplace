@@ -9,13 +9,16 @@ const userSchema = require("../user/schema");
 
 const typeDefs = gql`
   ${permissionTypes}
+  ${roleTypes}
 
   type Query {
     ${permissionSchema.query}
+    ${roleSchema.query}
   }
 
   type Mutation {
     ${permissionSchema.mutations}
+    ${roleSchema.mutations}
   }
 `;
 
