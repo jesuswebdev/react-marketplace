@@ -14,5 +14,5 @@ module.exports = (mongoose, config = {}) => {
     { timestamps: true, ...config }
   );
 
-  return mongoose.model("Role", schema);
+  return mongoose.model("User", schema);
 };
