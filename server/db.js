@@ -10,7 +10,7 @@ module.exports = {
       const db = await Mongoose.createConnection(options.DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
-      });
+      }).asPromise();
 
       require("./src/permission/model")(db);
       require("./src/role/model")(db);
